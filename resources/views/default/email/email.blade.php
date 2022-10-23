@@ -12,6 +12,7 @@
                   <td>
                     @yield('content')
                   </td>
+                    
                 </tr>
               </table>
           </tr>
