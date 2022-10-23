@@ -116,16 +116,16 @@
                 </div>
                 <div class="p-9 block">
                     <h2 class="text-xl font-bold">{{$paquete->titulo}}
-{{--                        <span class="text-secondary">--}}
-{{--                            <span class="text-xs align-top">Desde</span>--}}
-{{--                            {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}--}}
-{{--                            <span class="text-xs">usd</span>--}}
-{{--                        </span>--}}
+                        <span class="text-secondary">
+                            <span class="text-xs align-top">Desde</span>
+                            {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}
+                            <span class="text-xs">usd</span>
+                        </span>
                     </h2>
                     <div class="text-sm mb-7 text-gray-500 mt-3">{!!Str::limit($paquete->descripcion, 100,$end='...')!!}</div>
 
                     <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                        <a href="/en-tours/{{$paquete->url}}" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
+                        <a href="{{route('paquete', $paquete->url)}}" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
                     </div>
                 </div>
             </div>
@@ -137,12 +137,12 @@
         <div class="lg:px-24 lg:py-32 p-16 bg-primary text-gray-50 shadow-xl lg:w-3/4 xl:w-3/4 2xl:w-1/2">
             <div class="relative">
                 <h4 class="lg:text-4xl md:text-5xl text-3xl text-white font-medium relative z-30 text-secondary">Tómese un descanso y vea</h4>
-                <h3 class="md:pl-10 md:text-5xl text-3xl my-3 font-bold text-gray-50 relative z-30">Nuestros ultimas noticias</h3>
+                <h3 class="md:pl-10 md:text-5xl text-3xl my-3 font-bold text-gray-50 relative z-30">Información útil</h3>
                 <h4 class="lg:text-7xl md:text-8xl text-5xl font-bold inset-0 text-gray-100 text-opacity-20 absolute z-10 -top-5">MOUNTAIN</h4>
             </div>
-            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out mt-5">
-                <a href="/noticias" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER NOTICIAS</a>
-            </div>
+{{--            <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out mt-5">--}}
+{{--                <a href="/noticias" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER NOTICIAS</a>--}}
+{{--            </div>--}}
             <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-10 mr-12 text-center cursor-pointer">
                 <div class="bg-white rounded-lg shadow transform hover:scale-105 transition duration-500">
                     <a href="/hoteles#hotel" class="flex flex-col justify-center items-center gap-4  p-5">
@@ -192,7 +192,7 @@
                     <div class="text-sm mb-7 text-gray-500 mt-3">{!!Str::limit($destino->resumen, 100,$end='...')!!}</div>
 
                     <div class="transform hover:-translate-y-3 transition duration-500 ease-in-out">
-                        <a href="/informacion-de-viaje#{{$destino->nombre}}" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
+                        <a href="{{route('destino', $destino)}}" class="transform hover:-translate-y-3 transition duration-500 ease-in-out rounded-full py-4 px-9 bg-secondary text-xs text-white font-semibold">VER DETALLES</a>
                     </div>
                 </div>
             </div>

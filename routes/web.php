@@ -20,10 +20,12 @@ Route::get('/', function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/en-tours', [HomeController::class, 'paquetes'])->name('paquetes');
-Route::get('/en-tours/{url}', [HomeController::class, 'paquete'])->name('paquete');
+Route::get('/paquete', [HomeController::class, 'paquetes'])->name('paquetes');
+Route::get('/paquete/{url}', [HomeController::class, 'paquete'])->name('paquete');
 Route::get('/f-a-q', [HomeController::class, 'faq'])->name('faq');
-Route::get('/informacion-de-viaje', [HomeController::class, 'informacion'])->name('informacion');
+Route::get('/destinos', [HomeController::class, 'destinos'])->name('destinos');
+
+Route::get('/destinos/{destino}', [HomeController::class, 'destino'])->name('destino');
 Route::get('/hoteles', [HomeController::class, 'hoteles'])->name('hoteles');
 Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
 Route::get('/noticias', [HomeController::class, 'noticias'])->name('noticias');

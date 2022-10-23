@@ -27,15 +27,26 @@
             <a href="/en-tours/{{$paquete->url}}" class="lg:hidden"><h3 class="text-2xl font-semibold text-primary pb-3 hover:text-secondary hover:font-light">{{$paquete->titulo}}</h3></a>
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center">
                <div class="relative">
-                  <a href="/en-tours/{{$paquete->url}}"><img src="{{asset($paquete->imagen)}}" class="object-cover shadow-lg rounded transform hover:scale-105 transition duration-500"></a>
-                  <div class=" absolute p-2 bottom-0 left-0 bg-gray-800 bg-opacity-60 text-secondary border-t border-r border-amber-300">
+                  <a href="{{route('paquete', $paquete)}}"><img src="{{asset($paquete->imagen)}}" class="object-cover shadow-lg rounded transform hover:scale-105 transition duration-500"></a>
+                  <div class=" absolute p-2 bottom-0 left-0 bg-primary bg-opacity-60 text-green-500 border-t border-r border-secondary">
                      <div class="cursor-pointer transform hover:scale-125 transition duration-500 font-black">{{$paquete->duracion}} días</div>
                   </div>
                </div>
                <div class="pr-5 py-2 border-r border-b border-secondary border-opacity-30 pb-5">
-                  <a href="/en-tours/{{$paquete->url}}" class="hidden lg:block"><h3 class="text-2xl font-semibold text-primary pb-3 hover:text-secondary hover:font-light">{{$paquete->titulo}}</h3></a>
+                  <a href="{{route('paquete', $paquete)}}" class="hidden lg:block"><h3 class="text-2xl font-semibold text-primary pb-3 hover:text-secondary hover:font-light">{{$paquete->titulo}}</h3></a>
+                   <div class="my-3 text-secondary italic font-semibold text-sm">
+                       @foreach($paquete->paquetes_destinos as $paquete_destino)
+                           {{$paquete_destino->destinos->nombre}}
+                           @if ($loop->iteration < count($paquete->paquetes_destinos)) , @else . @endif
+                       @endforeach
+                   </div>
                   <div class="text-sm text-justify text-gray-600">{!!$paquete->descripcion!!}</div>
-                  <div class="mt-3"><a href="/en-tours/{{$paquete->url}}" class="text-sm bg-secondary bg-opacity-80 rounded p-2 text-white hover:text-primary hover:opacity-70">Ver detalles</a></div>
+                   <div class="text-green-500 my-4 font-bold">
+                       <span class="text-xs align-top">Desde</span>
+                       {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_d}}
+                       <span class="text-xs">usd</span>
+                   </div>
+                  <div class="mt-3"><a href="{{route('paquete', $paquete)}}" class="text-sm bg-secondary bg-opacity-80 rounded p-2 text-white hover:text-primary hover:opacity-70">Ver detalles</a></div>
                </div>
             </div>
          </div>

@@ -33,7 +33,7 @@
                         <h3 class="text-primary text-2xl font-semibold hover:text-secondary hover:font-light mb-2">{{$destino->nombre}}</h3>
                         <div class="grid lg:grid-cols-2 grid-cols-1 gap-5 items-center">
                             <div>
-                                <img src="{{asset($destino->imagen)}}" class="object-cover rounded-lg hover:shadow-xl transform hover:scale-105 transition duration-500">
+                                <a href="{{ route('destino', $destino) }}"><img src="{{asset($destino->imagen)}}" class="object-cover rounded-lg hover:shadow-xl transform hover:scale-105 transition duration-500"></a>
                             </div>
                             <div class="flex flex-col text-gray-700 p-5 border-r border-b border-secondary border-opacity-30">
                                 <div class="mt-3 text-gray-500">

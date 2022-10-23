@@ -2,7 +2,7 @@
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
           <tr>
             <td bgcolor="#ffc181" align="center" style="padding: 40px 0 30px 0;">
-              <img src="{{asset('images/logo-mountain')}}" alt="Mountain" width="250px"/>
+              <img src="{{asset('images/logo-mountain.png')}}" alt="Mountain" width="250px"/>
             </td>
           </tr>
           <tr>

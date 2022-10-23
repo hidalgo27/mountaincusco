@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Page;
 
 use App\Http\Controllers\Controller;
 use App\Models\TPaquete;
+use App\Models\TPaqueteDestino;
 use Illuminate\Http\Request;
 use App\Models\THotel;
 use App\Models\TpaqueteItinerario;
@@ -33,11 +34,19 @@ class HomeController extends Controller
         $itinerario=TpaqueteItinerario::where('idpaqueteS',$paquete->id)->get();
         return view('page.toursDetail',compact('paquete','paquetes','itinerario'));
     }
+    public function destino(TDestino $destino){
+        $paquetes = TPaqueteDestino::
+        with('paquetes.precio_paquetes','destinos', 'paquetes.paquetes_destinos.destinos')
+            ->where('iddestinos', $destino->id)
+            ->get();
+//        $paquetes=TPaquete::paginate(5);
+        return view('page.destino',compact('paquetes', 'destino'));
+    }
     public function faq(){
         $paquetes = TPaquete::latest()->take(4)->get();
         return view('page.faq',compact('paquetes'));
     }
-    public function informacion(){
+    public function destinos(){
         $destinos=TDestino::all();
         $paquetes=TPaquete::all();
         return view('page.informacion',compact('destinos','paquetes'));

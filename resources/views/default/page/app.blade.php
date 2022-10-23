@@ -54,7 +54,7 @@
     <div class="fixed bottom-0 right-0 z-50 p-2">
         <a href="https://api.whatsapp.com/send?phone=51987361601" target="_blank">
             <img src="{{asset('images/whatsapp-i.png')}}" alt="" class="w-20 animate-bounce">
-        </a>51987361601
+        </a>
     </div>
 
 {{--    <div class="text-white px-6 py-1 flex items-center justify-between border-0 relative w-full bg-secondary bg-opacity-90">--}}
@@ -114,11 +114,11 @@
             <div class="items-center bg-primary bg-opacity-80 py-4 px-24 justify-center md:flex toggle hidden z-30">
                 <div class="flex flex-col md:flex-row lg:mx-6 md::gap-0 gap-2">
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out"  href="/nosotros">Nosotros</a>
-                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/en-tours">Top Cusco Tours</a>
-                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/informacion-de-viaje">Información</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="{{route('paquetes')}}">Paquetes de Viaje</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="{{route('destinos')}}">Destinos Perú</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/hoteles">Hoteles</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/f-a-q">FAQs</a>
-                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/noticias">Noticias</a>
+{{--                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/noticias">Noticias</a>--}}
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/contacto">Contacto</a>
                 </div>
             </div>
