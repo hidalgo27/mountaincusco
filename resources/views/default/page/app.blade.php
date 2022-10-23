@@ -159,7 +159,7 @@
     @yield('content')
     <section class="flex justify-center gap-12 sm:gap-24 bg-gray-100 py-6">
         <div class="">
-            <a class="venobox block relative group" data-gall="myGallery" framewidth="100" href="{{asset('doc/marca-peru.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery" framewidth="100" href="http://gotoperu-mx.s3-us-west-1.amazonaws.com/destinations/slider/1574272277110ica_1574272276.jpg">
                 <img src="{{asset('images/logos/marca-peru.png')}}" alt="" class="w-40">
                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -170,7 +170,7 @@
         </div>
 
         <div class="">
-            <a class="venobox block relative group" data-gall="myGallery"  href="{{asset('doc/Dircetur.jpg')}}">
+            <a class="venobox block relative group" data-gall="myGallery"  href="http://gotoperu-mx.s3-us-west-1.amazonaws.com/destinations/slider/1574272361816AV600-1_1574272361.jpg">
                 <img src="{{asset('images/logos/gercetur.png')}}" alt="" class="w-40">
                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="bg-primary bg-opacity-70 p-1 rounded-md h-8 w-8 text-gray-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
