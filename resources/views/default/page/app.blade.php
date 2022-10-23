@@ -52,9 +52,9 @@
 {{--    </div>--}}
 
     <div class="fixed bottom-0 right-0 z-50 p-2">
-        <a href="https://api.whatsapp.com/send?phone=51984645720" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=51987361601" target="_blank">
             <img src="{{asset('images/whatsapp-i.png')}}" alt="" class="w-20 animate-bounce">
-        </a>
+        </a>51987361601
     </div>
 
 {{--    <div class="text-white px-6 py-1 flex items-center justify-between border-0 relative w-full bg-secondary bg-opacity-90">--}}
