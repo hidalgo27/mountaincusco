@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+.btn-primary {
+    @apply px-12 py-3 text-xs font-light text-gray-50 bg-primary tracking-wider border border-primary hover:bg-gray-200 hover:text-primary hover:bg-opacity-5 transition duration-500 focus:outline-none focus:ring-2 focus:ring-gray-300;
+}
+.btn-secondary {
+    @apply px-12 py-3 text-xs font-light text-gray-50 bg-secondary tracking-wider border border-secondary hover:bg-gray-200 hover:text-secondary hover:bg-opacity-5 transition duration-500 focus:outline-none focus:ring-2 focus:ring-gray-300;
+}
+.btn-white {
+    @apply px-12 py-3 text-xs font-light tracking-wider border border-gray-300 hover:bg-gray-200 hover:bg-opacity-5 transition duration-500 text-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-300;
+}
+}
+.tab-content {
+    max-height: 0;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+    }
+    /* :checked - resize to full height */
+    .tab input:checked ~ .tab-content {
+    max-height: 1000vh;
+    }
+    .tab input:checked + label{
+    font-size: 1rem; 
+    font-weight: 600;
+    padding: 1.25rem; 
+    border-left-width: 2px; 
+    border-color: #001544; 
+    background-color: #f8fafc; 
+    color: #001544; 
+    }
+    .tab label::after {
+    float:right;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5;
+    font-size: 1.50rem;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+    color: #fff;
+    }
+    .tab input[type=checkbox] + label::after, .tab input[type=radio] + label::after {
+    content: "+";
+    font-weight:bold; 
+    border-radius: 9999px; 
+    background-color: #001544;
+    opacity: 0.7;
+    }
+    .tab input[type=checkbox]:checked + label::after,.tab input[type=radio]:checked + label::after {
+    transform: rotate(315deg);
+    background-color: #001544; 
+    color: #FF9C34; 
+    opacity: 0.9;
+    }
+    .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+    }
+    .carousel-item {
+        -webkit-transition: opacity 0.3s ease-out;
+        transition: opacity 0.3s ease-out;
+    }
+    .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+    }
+    .card:hover .image img {
+        opacity: .5;
+        transform: translateX(30%);/*100%*/
+    }
+    .card .details {
+        transform: perspective(2000px) rotateY(-90deg);
+    }
+    .card:hover .details {
+        transform: perspective(2000px) rotateY(0deg);
+    }
+    .card:hover .image .box{
+        visibility: hidden;
+        background-color: rgba(222, 221, 231, 0.9), rgba(253, 251, 241, 0.9)
+    }
