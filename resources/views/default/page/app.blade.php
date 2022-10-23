@@ -75,8 +75,8 @@
         <div class="flex flex-col">
             <div class="relative items-start shadow grid grid-cols-3 justify-between z-30">
                 <div class="p-8 flex inline-flex text-gray-50 items-center invisible sm:visible">
-                    <a href="#"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>
-                    <span class="mx-2">|</span>
+{{--                    <a href="#"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>--}}
+{{--                    <span class="mx-2">|</span>--}}
                     <i data-feather="phone" class="" stroke-width="1"></i> +51 984 123456
                 </div>
                 <div class="p-3">
