@@ -20,7 +20,7 @@ use Illuminate\Support\Collection;
 class HomeController extends Controller
 {
     public function index(){
-        $paquetes = TPaquete::latest()->take(3)->get();
+        $paquetes = TPaquete::where('is_p_t', 1)->get();
         $destinos = TDestino::latest()->take(3)->get();
         return view('page.home',compact('paquetes','destinos'));
     }
