@@ -25,25 +25,20 @@
             <section class="px-5">
                 <div class="relative">
                     <div class="text-gray-500">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis delectus dolores eius iusto! Asperiores, cum dicta eos inventore itaque modi nemo nulla omnis quas quia tenetur vel voluptatem? Beatae, reprehenderit.</p>
+                        Somos una prestigiosa empresa de operadores turísticos en Cusco, Perú; que se especializa en tours a Machu Picchu y Camino Inca. Mountain Cusco Tours se enorgullece de ser un operador turístico de base local a un precio razonable y dedicado a mostrar al Perú de manera responsable. Somos un grupo de profesionales que decidimos comenzar esta empresa como una forma de retribuir a nuestra comunidad. Nos diferenciamos de otros operadores turísticos al pagarles a nuestros guías, porteadores, empleados y personal genealógico un salario digno y mejorar las vidas de las muchas comunidades Qechua que visitamos al donarles una parte de nuestras ganancias. La mayoría de los operadores no asisten a los quechuas nativos cuando visitan sus comunidades, sin embargo, el pueblo quechua y su cultura son un gran atractivo para los turistas y viajeros, y hacen contribuciones considerables al comercio turístico en el Perú. Para abordar este problema, Mountain Cusco Tours  ofrece un turismo social y ambientalmente responsable. Extendemos una invitación a todos aquellos que han planeado o están planeando su viaje al área de Cuzco en Perú para que nos acompañen en este esfuerzo para mejorar la vida de tantos. Al unirse a nosotros para una excursión o caminata, también se está uniendo a nuestro esfuerzo para nivelar el campo de juego y crear un Perú más justo a través de los medios de viaje.
                     </div>
-                    <div class="text-gray-500 py-5">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aperiam cupiditate dignissimos, error eum inventore ipsam laborum non officia pariatur quaerat veritatis voluptatem! Ab adipisci dolorem necessitatibus numquam quasi.</p>
-                    </div>
-                    <div class="text-gray-500">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias amet animi dolorum ducimus eos fuga nam optio quibusdam temporibus. A beatae culpa explicabo nihil, quidem sit tenetur unde! Deleniti?</p>
-                    </div>
+
                     <img src="{{asset('images/iconos/calidad.png')}}" class="opacity-10 absolute top-10 right-10 h-64 w-64">
                 </div>
                 <div class="pt-12 pb-16">
-                    <span class="text-primary font-semibold text-xl">Acerca del Mountain Cusco Tours <span class="text-gray-700">(Zenayda)</span></span>
+                    <span class="text-primary font-semibold text-xl">Acerca de Mountain Cusco Tours <span class="text-gray-700">(Zenayda)</span></span>
                     <div class="grid lg:grid-cols-3 grid-cols-1 pt-5 gap-5 ">
                         <div class="flex justify-center"><img src="http://gotoperu-mx.s3-us-west-1.amazonaws.com/destinations/slider/1574272727139montana7colores_1574272726.jpg" class="h-full object-cover rounded-lg shadow-lg"></div>
                         <div class="lg:col-span-2 text-gray-500 pt-5 border-r border-b border-secondary border-opacity-30 px-5">
-                            <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur cum delectus et ex facere minima modi non reiciendis, ullam? Consequuntur labore magni quaerat quibusdam quidem! At illum nihil unde?</p>
-                            <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aperiam consequatur deleniti eius exercitationem, facilis modi molestiae nemo optio possimus quod sed similique, soluta, tempora totam vel vitae voluptatem.</p>
-                            <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos distinctio doloremque, itaque iusto maiores necessitatibus neque, perspiciatis, quaerat recusandae temporibus totam unde velit? Animi excepturi maiores placeat reprehenderit tenetur!</p>
-                            <p class="pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ex fugit iusto magni maxime optio possimus. Aut autem dicta excepturi, illo inventore ipsam laboriosam magnam nemo neque quibusdam, repellendus, reprehenderit.</p>
+                            <h3 class="text-primary font-semibold text-xl">MISIÓN</h3>
+                            <p class="pb-5">Mountain Cusco Tours  tiene el deber de aliviar la pobreza en nuestra comunidad apoyando proyectos que promuevan el desarrollo sostenible. Nos gustaría que nuestros proyectos sirvan de ejemplo para que practiquen otros operadores turísticos. Por este motivo, dedicamos nuestros esfuerzos hacia el desarrollo sostenible en diversas formas, como la educación y la agricultura.</p>
+                            <h3 class="text-primary font-semibold text-xl">MISIÓN</h3>
+                            <p class="pb-5">Nuestro camino nos lleva a las comunidades nativas más desfavorecidas de la zona del Cusco. Si bien existe una pobreza extrema en estas áreas, también encontrará iniciativa, creatividad e ingenio que son intrínsecos a las personas de estas comunidades. Nuestro objetivo es ayudar a las personas a demostrar su potencial completo: no rendirse a la adversidad, fortalecer la determinación de ayudarse a sí mismos y no permitirse sufrir pasivamente las circunstancias.</p>
                         </div>
                     </div>
                 </div>
