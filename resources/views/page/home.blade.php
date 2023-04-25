@@ -199,6 +199,23 @@
         @endforeach
     </section>
 
+    <section class="md:px-24  px-10 grid grid-cols-1">
+        <div class="relative mb-10">
+            <h2 class="md:text-5xl text-3xl font-semibold z-30 text-primary relative">Videos Populares</h2>
+            <h4 class="md:text-8xl text-5xl font-bold inset-0 text-gray-100 text-opacity-90 absolute z-10 -top-10">EXPERIENCIA</h4>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+            <div class="">
+                <iframe width="100%" height="230" src="https://www.youtube.com/embed/1fJrt8ZlA-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="">
+                <iframe width="100%" height="230" src="https://www.youtube.com/embed/PIIR4xKwLc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="">
+                <iframe width="100%" height="230" src="https://www.youtube.com/embed/In2a15JpZHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
 @endsection
 @push('scripts')
