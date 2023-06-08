@@ -41,11 +41,11 @@
                        @endforeach
                    </div>
                   <div class="text-sm text-justify text-gray-600">{!!$paquete->descripcion!!}</div>
-                   <div class="text-green-500 my-4 font-bold">
-                       <span class="text-xs align-top">Desde</span>
-                       {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_d}}
-                       <span class="text-xs">usd</span>
-                   </div>
+{{--                   <div class="text-green-500 my-4 font-bold">--}}
+{{--                       <span class="text-xs align-top">Desde</span>--}}
+{{--                       {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_d}}--}}
+{{--                       <span class="text-xs">usd</span>--}}
+{{--                   </div>--}}
                   <div class="mt-3"><a href="{{route('paquete', $paquete)}}" class="text-sm bg-secondary bg-opacity-80 rounded p-2 text-white hover:text-primary hover:opacity-70">Ver detalles</a></div>
                </div>
             </div>

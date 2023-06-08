@@ -116,11 +116,11 @@
                 </div>
                 <div class="p-9 block">
                     <h2 class="text-xl font-bold">{{$paquete->titulo}}
-                        <span class="text-secondary">
-                            <span class="text-xs align-top">Desde</span>
-                            {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}
-                            <span class="text-xs">usd</span>
-                        </span>
+{{--                        <span class="text-secondary">--}}
+{{--                            <span class="text-xs align-top">Desde</span>--}}
+{{--                            {{$paquete->precio_paquetes->where('estrellas', 2)->first()->precio_s}}--}}
+{{--                            <span class="text-xs">usd</span>--}}
+{{--                        </span>--}}
                     </h2>
                     <div class="text-sm mb-7 text-gray-500 mt-3">{!!Str::limit($paquete->descripcion, 100,$end='...')!!}</div>
 

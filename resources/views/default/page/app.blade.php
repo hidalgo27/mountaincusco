@@ -83,15 +83,24 @@
                     <a href="/"><img src="<?php echo e(asset('images/logo-mountain.png')); ?>" alt="" class="w-48 mx-auto"></a>
                 </div>
                 <div class="flex justify-end p-8 invisible sm:visible">
+{{--                    <a href="#" target="_blank" class="mx-2">--}}
+{{--                        <i data-feather="facebook" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                    </a>--}}
+{{--                    <a href="#" target="_blank" class="mx-2">--}}
+{{--                        <i data-feather="youtube" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                    </a>--}}
                     <a href="#" target="_blank" class="mx-2">
-                        <i data-feather="facebook" class="text-gray-50" stroke-width="1"></i>
+                        <img src="{{asset('images/iconos/facebook.png')}}" alt="" class="w-6">
                     </a>
-                    <a href="#" target="_blank" class="mx-2">
-                        <i data-feather="youtube" class="text-gray-50" stroke-width="1"></i>
+                    <a href="https://www.tiktok.com/@mountaincuscotours" target="_blank" class="mx-2">
+                        <img src="{{asset('images/iconos/tiktok.png')}}" alt="" class="w-6">
                     </a>
-                    <a href="#" target="_blank" class="mx-2">
-                        <img src="{{asset('images/iconos/ico_tripadvisor.png')}}" alt="" class="w-6">
+                    <a href="https://instagram.com/mountaincuscotours" target="_blank" class="mx-2">
+                        <img src="{{asset('images/iconos/instagram.png')}}" alt="" class="w-6">
                     </a>
+{{--                    <a href="#" target="_blank" class="mx-2">--}}
+{{--                        <img src="{{asset('images/iconos/ico_tripadvisor.png')}}" alt="" class="w-6">--}}
+{{--                    </a>--}}
                 </div>
             </div>
 
@@ -117,8 +126,9 @@
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="{{route('paquetes')}}">Paquetes de Viaje</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="{{route('destinos')}}">Destinos Perú</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/hoteles">Hoteles</a>
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/transporte">Transporte</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/f-a-q">FAQs</a>
-{{--                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/noticias">Noticias</a>--}}
+                    <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/codigo-esnna">Código Esnna</a>
                     <a class="text-gray-50 my-1 text-sm font-medium dark:text-gray-200 hover:text-secondary dark:hover:text-indigo-400 md:mx-4 md:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out" href="/contacto">Contacto</a>
                 </div>
             </div>
@@ -140,7 +150,7 @@
 {{--            </a>--}}
         </div>
         <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />Your browser does not support the video tag.
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-valley-in-the-mountains-with-a-cloudy-sky-9839-large.mp4" type="video/mp4" />Your browser does not support the video tag.
 {{--            <source src="{{asset('media/intro.mp4')}}" type="video/mp4" />Your browser does not support the video tag.--}}
         </video>
         {{--        <div class="vimeo-wrapper absolute z-10 w-auto min-w-full min-h-full max-w-none">--}}
@@ -226,10 +236,13 @@
         <div class="bg-footer-texture bg-repeat-x bg-12 top-0 w-full z-30 p-12">
             <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
                 <div class="text-white">
-                    <div class="font-semibold uppercase text-sm">
+                    <div class="font-semibold uppercase text-sm mb-3">
                         <span>Mountain Cusco</span><span class="text-secondary"> Tours Perú</span>
                     </div>
-                    <p class="p-5 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestiae provident illo, eveniet qui deleniti.<p>
+                    <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>
+                    <p class="mb-2 text-sm">RUC: 20609965691<p>
+                    <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>
+
 
                 </div>
                 <div class="text-white">
@@ -238,7 +251,7 @@
                         <i data-feather="phone" class="ml-6 text-secondary"></i>
                         <div class="grid grid-rows-2">
 {{--                            <span>+51 84 228824</span>--}}
-                            <span>+51 987 456567</span>
+                            <span>+51987361601 | +51951272936</span>
                         </div>
                     </div>
                     <div class="flex items-center gap-x-3 text-sm">
@@ -267,7 +280,7 @@
         </div>
         <hr class="mx-16">
         <div class="container mx-auto text-center text-xs text-gray-50 py-3">
-            Copyright Nebula 2021 All Rights Reserved | <a href="#" target="_blank" class="font-medium">Términos y Condiciones</a>
+            Copyright Nebula 2023 All Rights Reserved | <a href="#" target="_blank" class="font-medium">Términos y Condiciones</a>
         </div>
     </footer>
 </div>
