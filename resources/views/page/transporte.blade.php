@@ -25,12 +25,22 @@
                 </div>
                 <div class="pt-12 pb-16">
                     {{--                    <span class="text-primary font-semibold text-xl">Acerca de Mountain Cusco Tours <span class="text-gray-700">(Zenayda)</span></span>--}}
-                    <div class="grid lg:grid-cols-2 grid-cols-2 pt-5 gap-5 ">
-                        <div class="flex justify-center"><img src="{{asset('images/afiche-esnna.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>
-                        <div class="text-gray-500 pt-5 border-r border-b border-secondary border-opacity-30 px-5">
-                            <div class="flex justify-center"><img src="{{asset('images/afiche-esnna.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>
-                        </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 pt-5 gap-5 ">
+                        <div class="flex justify-center"><img src="{{asset('images/transport/transport3.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>
+                        <div class="flex justify-center"><img src="{{asset('images/transport/transport4.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>
+{{--                        <div class="flex justify-center"><img src="{{asset('images/transport/transport5.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>--}}
                     </div>
+                    <div class="grid lg:grid-cols-3 grid-cols-1 pt-5 gap-5 ">
+                        <div class="flex justify-center"><img src="{{asset('images/transport/transport1.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>
+                        <div class="flex justify-center"><img src="{{asset('images/transport/transport2.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>
+                        <div class="flex justify-center"><img src="{{asset('images/transport/transport3.jpg')}}" class="h-full object-cover rounded-lg shadow-lg"></div>
+                    </div>
+                    <div class="grid  pt-5 gap-5 ">
+                        <div class="flex justify-center"><img src="{{asset('images/transport/transport7.jpg')}}" class="h-full w-full object-cover rounded-lg shadow-lg"></div>
+                    </div>
+{{--                    <div class="grid  pt-5 gap-5 ">--}}
+{{--                        <div class="flex justify-center"><img src="{{asset('images/transport/transport5.jpg')}}" class="h-full w-full object-cover rounded-lg shadow-lg"></div>--}}
+{{--                    </div>--}}
                 </div>
             </section>
         </div>
