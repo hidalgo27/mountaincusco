@@ -89,7 +89,7 @@
 {{--                    <a href="#" target="_blank" class="mx-2">--}}
 {{--                        <i data-feather="youtube" class="text-gray-50" stroke-width="1"></i>--}}
 {{--                    </a>--}}
-                    <a href="#" target="_blank" class="mx-2">
+                    <a href="https://www.facebook.com/mountaincuscotours" target="_blank" class="mx-2">
                         <img src="{{asset('images/iconos/facebook.png')}}" alt="" class="w-6">
                     </a>
                     <a href="https://www.tiktok.com/@mountaincuscotours" target="_blank" class="mx-2">
@@ -241,7 +241,7 @@
                     </div>
                     <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>
                     <p class="mb-2 text-sm">RUC: 20609965691<p>
-                    <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>
+{{--                    <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>--}}
 
 
                 </div>
@@ -269,11 +269,20 @@
                 <div class="flex flex-col gap-2 text-white">
                     <span class="font-semibold uppercase text-sm">Visita Nuestras redes sociales</span>
                     <div class="flex flex-row pt-5 px-3 gap-3">
-                        <a href="#" target="_blank"><img src="{{asset('images/iconos/face2.png')}}" class="h-20 w-20 transform hover:scale-125 transition duration-500 "></a>
-                        <a href="#" target="_blank"><img src="{{asset('images/iconos/you2.png')}}" class="h-20 w-20 transform hover:scale-125 transition duration-500"></a>
-                        <div class=" bg-green-500 rounded-full h-20 w-20 flex items-center justify-center transform hover:scale-125 transition duration-500">
-                            <a href="#" target="_blank"><img src="{{asset('images/iconos/ico_tripadvisor.png')}}" class="h-8 w-8 "></a>
-                        </div>
+{{--                        <a href="https://www.facebook.com/mountaincuscotours" target="_blank"><img src="{{asset('images/iconos/facebook.png')}}" class="h-20 w-20 transform hover:scale-125 transition duration-500 "></a>--}}
+{{--                        <a href="#" target="_blank"><img src="{{asset('images/iconos/you2.png')}}" class="h-20 w-20 transform hover:scale-125 transition duration-500"></a>--}}
+{{--                        <div class=" bg-green-500 rounded-full h-20 w-20 flex items-center justify-center transform hover:scale-125 transition duration-500">--}}
+{{--                            <a href="#" target="_blank"><img src="{{asset('images/iconos/ico_tripadvisor.png')}}" class="h-8 w-8 "></a>--}}
+{{--                        </div>--}}
+                        <a href="https://www.facebook.com/mountaincuscotours" target="_blank" class="mx-2">
+                            <img src="{{asset('images/iconos/facebook.png')}}" alt="" class="w-12">
+                        </a>
+                        <a href="https://www.tiktok.com/@mountaincuscotours" target="_blank" class="mx-2">
+                            <img src="{{asset('images/iconos/tiktok.png')}}" alt="" class="w-12">
+                        </a>
+                        <a href="https://instagram.com/mountaincuscotours" target="_blank" class="mx-2">
+                            <img src="{{asset('images/iconos/instagram.png')}}" alt="" class="w-12">
+                        </a>
                     </div>
                 </div>
             </div>
