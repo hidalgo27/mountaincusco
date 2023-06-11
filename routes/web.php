@@ -34,6 +34,7 @@ Route::get('/noticias/categoria/{categoria}',[HomeController::class,'noticias_ca
 Route::get('/nosotros', [HomeController::class, 'nosotros'])->name('nosotros');
 Route::get('/codigo-esnna', [HomeController::class, 'esnna'])->name('esnna');
 Route::get('/transporte', [HomeController::class, 'transporte'])->name('transporte');
+Route::get('/pagos', [HomeController::class, 'pagos'])->name('pagos');
 Route::post('/',[HomeController::class,'contact_form'])->name('contact_form');
 Route::post('/tour',[HomeController::class,'contact_form_tour'])->name('contact_form_tour');
 //form inquire

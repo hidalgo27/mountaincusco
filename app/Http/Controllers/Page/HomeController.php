@@ -119,6 +119,10 @@ class HomeController extends Controller
         $paquetes=TPaquete::all();
         return view('page.transporte',compact('paquetes'));
     }
+    public function pagos(){
+        $paquetes=TPaquete::all();
+        return view('page.pagos',compact('paquetes'));
+    }
     public function contact_form(Request $request){
         $from = 'info@mountaincuscotours.com';
         $nombre = $request->tNombre;

@@ -259,6 +259,7 @@
                         <div class="grid grid-rows-2">
                             <span>info@mountaincuscotours.com</span>
                             <span>cesar@mountaincuscotours.com</span>
+                            <span>mountaintourscusco@gmail.com</span>
                         </div>
                     </div>
                     <div class="flex items-center my-3 gap-x-3 text-sm">

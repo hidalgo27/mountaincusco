@@ -36,6 +36,7 @@
                         <div class="flex flex-col gap-1 text-gray-700">
                             <span class="hover:text-secondary break-all">admin@mountaincuscotours.com</span>
                             <span class="hover:text-secondary break-all">cesar@mountaincuscotours.com</span>
+                            <span class="hover:text-secondary break-all">mountaintourscusco@gmail.com</span>
                         </div>
                     </div>
                     <div class="flex lg:gap-3 gap-7 items-center shadow-xl rounded-b-xl p-3 cursor-default border-t-2 border-amber-300 transform hover:scale-105 transition duration-500">
