@@ -77,7 +77,7 @@
                 <div class="p-8 flex inline-flex text-gray-50 items-center invisible sm:visible">
 {{--                    <a href="#"><img src="{{asset('images/iconos/reino-unido.png')}}" alt="" class="w-9 ml-3"></a>--}}
 {{--                    <span class="mx-2">|</span>--}}
-                    <i data-feather="phone" class="" stroke-width="1"></i> +51 984 123456
+                    <i data-feather="phone" class="" stroke-width="1"></i> +51 987361601
                 </div>
                 <div class="p-3">
                     <a href="/"><img src="<?php echo e(asset('images/logo-mountain.png')); ?>" alt="" class="w-48 mx-auto"></a>
@@ -237,7 +237,7 @@
             <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
                 <div class="text-white">
                     <div class="font-semibold uppercase text-sm mb-3">
-                        <span>Mountain Cusco</span><span class="text-secondary"> Tours Perú</span>
+                        <span>Mountain Cusco</span><span class="text-secondary"> Tours</span>
                     </div>
                     <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>
                     <p class="mb-2 text-sm">RUC: 20609965691<p>
