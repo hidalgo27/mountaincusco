@@ -98,9 +98,9 @@
                     <a href="https://instagram.com/mountaincuscotours" target="_blank" class="mx-2">
                         <img src="{{asset('images/iconos/instagram.png')}}" alt="" class="w-6">
                     </a>
-{{--                    <a href="#" target="_blank" class="mx-2">--}}
-{{--                        <img src="{{asset('images/iconos/ico_tripadvisor.png')}}" alt="" class="w-6">--}}
-{{--                    </a>--}}
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d10181981-Reviews-Mountain_Cusco_Tours-Cusco_Cusco_Region.html" target="_blank" class="mx-2">
+                        <img src="{{asset('images/iconos/ico_tripadvisor.png')}}" alt="" class="w-6">
+                    </a>
                 </div>
             </div>
 
@@ -283,6 +283,9 @@
                         </a>
                         <a href="https://instagram.com/mountaincuscotours" target="_blank" class="mx-2">
                             <img src="{{asset('images/iconos/instagram.png')}}" alt="" class="w-12">
+                        </a>
+                        <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d10181981-Reviews-Mountain_Cusco_Tours-Cusco_Cusco_Region.html" target="_blank" class="mx-2">
+                            <img src="{{asset('images/iconos/ico_tripadvisor.png')}}" alt="" class="w-12">
                         </a>
                     </div>
                 </div>
