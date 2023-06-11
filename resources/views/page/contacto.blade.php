@@ -27,21 +27,21 @@
                     <div class="flex lg:gap-3 gap-7 items-center shadow-xl rounded-b-xl p-3 cursor-default border-t-2 border-amber-300 transform hover:scale-105 transition duration-500">
                         <img src="{{asset('images/iconos/cel.png')}}" class="h-16 w-16">
                         <div class="flex flex-col gap-1 text-gray-700">
-                            <span class="hover:text-secondary">+51 84 123456</span>
-                            <span class="hover:text-secondary">+51 984 123456</span>
+                            <span class="hover:text-secondary">+51 987361601</span>
+                            <span class="hover:text-secondary">+51 951272936</span>
                         </div>
                     </div>
                     <div class="flex lg:gap-3 gap-7 items-center shadow-xl rounded-b-xl p-3 cursor-default border-t-2 border-amber-300 transform hover:scale-105 transition duration-500">
                         <img src="{{asset('images/iconos/email.png')}}" class="h-16 w-16">
                         <div class="flex flex-col gap-1 text-gray-700">
                             <span class="hover:text-secondary break-all">admin@mountaincuscotours.com</span>
-                            <span class="hover:text-secondary break-all">info@mountaincuscotours.com</span>
+                            <span class="hover:text-secondary break-all">cesar@mountaincuscotours.com</span>
                         </div>
                     </div>
                     <div class="flex lg:gap-3 gap-7 items-center shadow-xl rounded-b-xl p-3 cursor-default border-t-2 border-amber-300 transform hover:scale-105 transition duration-500">
                         <img src="{{asset('images/iconos/ubi.png')}}" class="h-16 w-16">
                         <div class="flex flex-col gap-1 text-gray-700">
-                            <span class="hover:text-secondary">Jr. Cusco nn. 233 San – Cusco – Peru</span>
+                            <span class="hover:text-secondary">Dirección Urbanización Tupac Amaru T-8 San Sebastián - Cusco</span>
                         </div>
                     </div>
                 </div>

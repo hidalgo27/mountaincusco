@@ -20,7 +20,7 @@
             </section>
             <section class="px-5">
                 <div class="relative">
-
+                    <p>Contamos con unidades vehiculares de distintos modelos y capacidad para ofrecer el servicio de transporte, son unidades modernas y confortables.</p>
                     <img src="{{asset('images/iconos/calidad.png')}}" class="opacity-10 absolute top-10 right-10 h-64 w-64">
                 </div>
                 <div class="pt-12 pb-16">

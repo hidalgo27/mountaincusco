@@ -251,19 +251,19 @@
                         <i data-feather="phone" class="ml-6 text-secondary"></i>
                         <div class="grid grid-rows-2">
 {{--                            <span>+51 84 228824</span>--}}
-                            <span>+51987361601 | +51951272936</span>
+                            <span>+51 987361601 | +51 951272936</span>
                         </div>
                     </div>
                     <div class="flex items-center gap-x-3 text-sm">
                         <i data-feather="mail" class="ml-6 my-auto text-secondary"></i>
                         <div class="grid grid-rows-2">
                             <span>info@mountaincuscotours.com</span>
-                            <span>admin@mountaincuscotours.com</span>
+                            <span>cesar@mountaincuscotours.com</span>
                         </div>
                     </div>
                     <div class="flex items-center my-3 gap-x-3 text-sm">
                         <i data-feather="map-pin" class="ml-6 text-secondary"></i>
-                        <span>Jr. nn. 602 San – Cusco – Peru</span>
+                        <span>Dirección Urbanización Tupac Amaru T-8 San Sebastián - Cusco</span>
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 text-white">
