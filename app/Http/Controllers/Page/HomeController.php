@@ -181,10 +181,10 @@ class HomeController extends Controller
             return $e;
         }
     }
-    public function getUrl(){
-        $url=url()->previous();
-        $url2=explode(env('APP_URL'),$url);
-        dd($url2[1]);
-        return $url3=str_replace('-', ' ', $url2[1]);
-    }
+//    public function getUrl(){
+//        $url=url()->previous();
+//        $url2=explode(env('APP_URL'),$url);
+//        dd($url2[1]);
+//        return $url3=str_replace('-', ' ', $url2[1]);
+//    }
 }
