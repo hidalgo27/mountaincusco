@@ -27,16 +27,23 @@
                     <table border="0" cellpadding="0" cellspacing="0" style="padding:0px 10px;">
                       <tr>
                         <td bgcolor="#001544" style="border-radius:50%">
-                          <a href="#" target="_blank">
-                            <img src="{{asset('images/iconos/facebook.png')}}" alt="Facebook" width="30" height="30" style="display: block;" border="0" />
-                          </a>
+                            <a href="https://www.facebook.com/mountaincuscotours" target="_blank" class="mx-2">
+                                <img src="{{asset('images/iconos/facebook.png')}}" alt="" class="w-6">
+                            </a>
                         </td>
                         <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
                         <td  bgcolor="#001544" style="border-radius:50%">
-                          <a href="#" target="_blank">
-                            <img src="{{asset('images/iconos/youtube.png')}}" alt="Youtube" width="30" height="30" style="display: block;" border="0" />
-                          </a>
+                            <a href="https://www.tiktok.com/@mountaincuscotours" target="_blank" class="mx-2">
+                                <img src="{{asset('images/iconos/tiktok.png')}}" alt="" class="w-6">
+                            </a>
                         </td>
+                          <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+                          <td  bgcolor="#001544" style="border-radius:50%">
+                              <a href="https://instagram.com/mountaincuscotours" target="_blank" class="mx-2">
+                                  <img src="{{asset('images/iconos/instagram.png')}}" alt="" class="w-6">
+                              </a>
+                          </td>
+                          
                       </tr>
                     </table>
                   </td>
