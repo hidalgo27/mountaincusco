@@ -43,7 +43,7 @@
                                   <img src="{{asset('images/iconos/instagram.png')}}" alt="" class="w-6">
                               </a>
                           </td>
-                          
+
                       </tr>
                     </table>
                   </td>

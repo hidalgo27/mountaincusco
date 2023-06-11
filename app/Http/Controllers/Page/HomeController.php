@@ -129,7 +129,7 @@ class HomeController extends Controller
         $email = $request->tEmail;
         $celular = $request->tCelular;
         $mensaje=$request->tMensaje;
-        $url3=$this->getUrl();
+//        $url3=$this->getUrl();
         try {
             Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
                 function ($messaje) use ($email, $nombre) { $messaje->to($email, $nombre)
@@ -140,7 +140,7 @@ class HomeController extends Controller
                 'nombre' => $nombre,
                 'email' => $email,
                 'celular' => $celular,
-                'url' =>$url3,
+//                'url' =>$url3,
                 'mensaje' => $mensaje,],
                 function ($messaje) use ($from) { $messaje->to($from, 'MOUNTAIN CUSCO TOURS')
                     ->subject('MOUNTAIN - Formulario de Contacto')
@@ -158,7 +158,7 @@ class HomeController extends Controller
         $email = $request->tEmail;
         $celular = $request->tCelular;
         $mensaje=$request->tMensaje;
-        $url3=$this->getUrl();
+//        $url3=$this->getUrl();
         try {
             Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
                 function ($messaje) use ($email, $nombre) { $messaje->to($email, $nombre)
@@ -169,7 +169,7 @@ class HomeController extends Controller
                 'nombre' => $nombre,
                 'email' => $email,
                 'celular' => $celular,
-                'url' =>$url3,
+//                'url' =>$url3,
                 'mensaje' => $mensaje,],
                 function ($messaje) use ($from) { $messaje->to($from, 'MOUNTAIN CUSCO TOURS')
                     ->subject('MOUNTAIN CUSCO TOURS - Formulario de Contacto TOUR')
@@ -184,6 +184,7 @@ class HomeController extends Controller
     public function getUrl(){
         $url=url()->previous();
         $url2=explode(env('APP_URL'),$url);
+        dd($url2[1]);
         return $url3=str_replace('-', ' ', $url2[1]);
     }
 }
