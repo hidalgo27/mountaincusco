@@ -8,7 +8,7 @@
         </tr>
         <tr>
             <td>
-                <p><strong>Formulario de: {{$url}}</strong></p>
+{{--                <p><strong>Formulario de: {{$url}}</strong></p>--}}
                 <p><strong>Email: {{$email}}</strong></p>
                 <p><strong>Celular: {{$celular}}</strong></p>
                 <p><strong>Mensaje: {{$mensaje}}</strong></p>
