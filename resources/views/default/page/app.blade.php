@@ -234,7 +234,7 @@
 
     <footer class="relative bg-primary pt-6">
         <div class="bg-footer-texture bg-repeat-x bg-12 top-0 w-full z-30 p-12">
-            <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
+            <div class="grid md:grid-cols-5 grid-cols-1 gap-8">
                 <div class="text-white">
                     <div class="font-semibold uppercase text-sm mb-3">
                         <span>Mountain Cusco</span><span class="text-secondary"> Tours</span>
@@ -243,37 +243,50 @@
                     <p class="mb-2 text-sm">RUC: 20609965691<p>
 {{--                    <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>--}}
 
-                    <div class="font-semibold uppercase text-sm mb-3 mt-6">
-                        Medios de pago
-                    </div>
-                    <div class=" flex gap-2">
-                        <img src="{{asset('images/logos/izi.jpg')}}" alt="" class="md:w-28 w-20 rounded">
-                        <img src="{{asset('images/logos/bcp.jpg')}}" alt="" class="md:w-28 w-20 rounded">
-                        <img src="{{asset('images/logos/wester.jpg')}}" alt="" class="md:w-28 w-20 rounded">
-                    </div>
-
                 </div>
                 <div class="text-white">
                     <span class="font-semibold uppercase text-sm">Contacto</span>
-                    <div class="flex items-center my-3 gap-x-3 text-sm">
-                        <i data-feather="phone" class="ml-6 text-secondary"></i>
+                    <div class="flex items-start my-3 gap-x-3 text-sm">
+                        <i data-feather="phone" class="text-xs text-secondary"></i>
                         <div class="grid grid-rows-2">
 {{--                            <span>+51 84 228824</span>--}}
                             <span>+51 987361601 | +51 951272936</span>
                         </div>
                     </div>
-                    <div class="flex items-center gap-x-3 text-sm">
-                        <i data-feather="mail" class="ml-6 my-auto text-secondary"></i>
+                    <div class="flex items-start gap-x-3 text-xs">
+                        <i data-feather="mail" class="my-auto text-secondary"></i>
                         <div class="grid grid-rows-2">
                             <span>info@mountaincuscotours.com</span>
                             <span>cesar@mountaincuscotours.com</span>
                             <span>mountaintourscusco@gmail.com</span>
                         </div>
                     </div>
-                    <div class="flex items-center my-3 gap-x-3 text-sm">
-                        <i data-feather="map-pin" class="ml-6 text-secondary"></i>
+                    <div class="flex items-center my-3 gap-x-3 text-xs">
+                        <i data-feather="map-pin" class="text-xs text-secondary w-12"></i>
                         <span>Dirección Urbanización Tupac Amaru T-8 San Sebastián - Cusco</span>
                     </div>
+                </div>
+                <div class="text-white">
+                    <span class="font-semibold uppercase text-sm">Nuestras Políticas</span>
+                    <div class="flex items-start my-3 gap-3 text-sm">
+                        <i data-feather="chevron-right" class="text-secondary"></i>
+                        <div class="grid grid-rows-2">
+                            {{--                            <span>+51 84 228824</span>--}}
+                            <a href="{{route('condiciones')}}" class="font-medium">Términos y Condiciones</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-white">
+                    <div class="font-semibold uppercase text-sm mb-3">
+                        Medios de pago
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <img src="{{asset('images/logos/izi.jpg')}}" alt="" class="w-full rounded">
+                        <img src="{{asset('images/logos/bcp.jpg')}}" alt="" class="w-full rounded">
+                        <img src="{{asset('images/logos/wester.jpg')}}" alt="" class="w-full rounded">
+                    </div>
+
                 </div>
                 <div class="flex flex-col gap-2 text-white">
                     <span class="font-semibold uppercase text-sm">Visita Nuestras redes sociales</span>
@@ -301,7 +314,7 @@
         </div>
         <hr class="mx-16">
         <div class="container mx-auto text-center text-xs text-gray-50 py-3">
-            Copyright Nebula 2023 All Rights Reserved | <a href="{{route('condiciones')}}" class="font-medium">Términos y Condiciones</a>
+            Copyright Nebula 2023 All Rights Reserved
         </div>
     </footer>
 </div>
