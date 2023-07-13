@@ -268,10 +268,16 @@
                 </div>
                 <div class="text-white">
                     <span class="font-semibold uppercase text-sm">Nuestras Políticas</span>
-                    <div class="flex items-start my-3 gap-3 text-sm">
+                    <div class="flex items-start mt-3 gap-3 text-sm">
                         <i data-feather="chevron-right" class="text-secondary"></i>
                         <div class="grid grid-rows-2">
-                            {{--                            <span>+51 84 228824</span>--}}
+
+                            <a href="{{route('personales')}}" class="font-medium">Protección de Datos Personales</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 text-sm">
+                        <i data-feather="chevron-right" class="text-secondary"></i>
+                        <div class="grid grid-rows-2">
                             <a href="{{route('condiciones')}}" class="font-medium">Términos y Condiciones</a>
                         </div>
                     </div>
