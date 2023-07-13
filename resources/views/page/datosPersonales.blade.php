@@ -1,6 +1,6 @@
 @extends('default.page.app')
 @section('title')
-<title>Términos y condiciones - Mountain Cusco Tours</title>
+<title>Política de tratamiento protección de datos personales - Mountain Cusco Tours</title>
 @endsection
 @section('title_header')
 <h1 class="text-xl mb-6 font-bold font-cinzel text-secondary">Mountain Cusco Tours</h1>
