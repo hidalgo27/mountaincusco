@@ -60,6 +60,10 @@ class HomeController extends Controller
         $paquetes=TPaquete::all();
         return view('page.contacto',compact('paquetes'));
     }
+    public function condiciones(){
+        $paquetes=TPaquete::all();
+        return view('page.condiciones',compact('paquetes'));
+    }
     public function noticias(){
         $paquetes=TPaquete::all();
         $posts= Blog_post::with(['user','categoria','imagenes'])->paginate(5);

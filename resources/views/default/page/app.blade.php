@@ -243,6 +243,14 @@
                     <p class="mb-2 text-sm">RUC: 20609965691<p>
 {{--                    <p class="mb-2 text-sm">Razón Social: CORPORACION DALEY EIRL<p>--}}
 
+                    <div class="font-semibold uppercase text-sm mb-3 mt-6">
+                        Medios de pago
+                    </div>
+                    <div class=" flex gap-2">
+                        <img src="{{asset('images/logos/izi.jpg')}}" alt="" class="md:w-28 w-20 rounded">
+                        <img src="{{asset('images/logos/bcp.jpg')}}" alt="" class="md:w-28 w-20 rounded">
+                        <img src="{{asset('images/logos/wester.jpg')}}" alt="" class="md:w-28 w-20 rounded">
+                    </div>
 
                 </div>
                 <div class="text-white">
@@ -293,7 +301,7 @@
         </div>
         <hr class="mx-16">
         <div class="container mx-auto text-center text-xs text-gray-50 py-3">
-            Copyright Nebula 2023 All Rights Reserved | <a href="#" target="_blank" class="font-medium">Términos y Condiciones</a>
+            Copyright Nebula 2023 All Rights Reserved | <a href="{{route('condiciones')}}" class="font-medium">Términos y Condiciones</a>
         </div>
     </footer>
 </div>

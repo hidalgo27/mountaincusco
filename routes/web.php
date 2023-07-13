@@ -28,6 +28,7 @@ Route::get('/destinos', [HomeController::class, 'destinos'])->name('destinos');
 Route::get('/destinos/{destino}', [HomeController::class, 'destino'])->name('destino');
 Route::get('/hoteles', [HomeController::class, 'hoteles'])->name('hoteles');
 Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
+Route::get('/condiciones', [HomeController::class, 'condiciones'])->name('condiciones');
 Route::get('/noticias', [HomeController::class, 'noticias'])->name('noticias');
 Route::get('/noticias/{url}',[HomeController::class,'noticias_detail'])->name('noticias_detail');
 Route::get('/noticias/categoria/{categoria}',[HomeController::class,'noticias_categoria'])->name('noticias_categoria');
