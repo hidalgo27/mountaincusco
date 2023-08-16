@@ -207,7 +207,7 @@
             <div class="absolute flex flex-col inset-0 flex items-end justify-center">
                 <div class="lg:w-2/5 md:w-3/5 md:p-10 bg-gray-50 p-6  sm:mr-24 flex flex-col rounded ">
                     <h2 class="text-3xl mb-6 font-black text-primary">Formulario de Contacto</h2>
-                    <form method="POST" action="{{route('contact_form')}}">
+                    <form method="POST" action="{{route('contact_form')}}" id="demo-form">
                         @csrf
                         <div class="mb-4">
                             <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tNombre" type="text" placeholder="Nombre" required>
@@ -222,7 +222,10 @@
                             <textarea class="shadow form-textarea mt-1 block w-full border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tMensaje" placeholder="Mensaje" required></textarea>
                         </div>
                         <div class="flex items-center justify-center">
-                            <button class="bg-secondary hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            <button class="bg-secondary g-recaptcha hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"
+                                    data-sitekey="6LeTKLAnAAAAACyYwuvEibGgQiph78CJAzlw5Wry"
+                                    data-callback='onSubmit'
+                                    data-action='submit'>
                                 Enviar
                             </button>
                         </div>
@@ -324,6 +327,7 @@
         </div>
     </footer>
 </div>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="{{asset('js/app.js')}}"></script>
 @stack('scripts')
 <script src="{{asset('js/plugins.js')}}"></script>
@@ -383,6 +387,11 @@
         }
         element.parentNode.parentNode.removeChild(element.parentNode);
     }
+
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+
 </script>
 </body>
 </html>
