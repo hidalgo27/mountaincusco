@@ -131,7 +131,67 @@ class HomeController extends Controller
         $paquetes=TPaquete::all();
         return view('page.pagos',compact('paquetes'));
     }
-    public function contact_form(Request $request){
+    public function contact_form(Request $request)
+    {
+        // 🐝 Honeypot (campo invisible)
+        if (!empty($request->input('website'))) {
+            return redirect()->back()->withErrors(['spam' => 'Intento de spam bloqueado.']);
+        }
+
+        // ✅ Validación de campos
+        $request->validate([
+            'tNombre' => 'required|string|max:100',
+            'tEmail' => 'required|email|max:255',
+            'tCelular' => 'nullable|string|max:20',
+            'tMensaje' => 'required|string|max:1000',
+            'g-recaptcha-response' => 'required'
+        ]);
+
+        // ✅ Validar reCAPTCHA v3 en el servidor
+        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => config('services.recaptcha.secret_key'),
+            'response' => $request->input('g-recaptcha-response'),
+            'remoteip' => $request->ip(),
+        ]);
+
+        $body = $response->json();
+
+        if (!$body['success'] || $body['score'] < 0.5) {
+            return redirect()->back()->withErrors(['captcha' => 'Verificación fallida. Intente nuevamente.']);
+        }
+
+        // 📧 Enviar los correos
+        try {
+            $from = 'info@mountaincuscotours.com';
+            $nombre = $request->tNombre;
+            $email = $request->tEmail;
+            $celular = $request->tCelular;
+            $mensaje = $request->tMensaje;
+
+            Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
+                function ($m) use ($email, $nombre) {
+                    $m->to($email, $nombre)
+                        ->subject('MOUNTAIN CUSCO TOURS')
+                        ->from('info@mountaincuscotours.com', 'MOUNTAIN CUSCO TOURS');
+                });
+
+            Mail::send(['html' => 'email.emailContacto'], [
+                'nombre' => $nombre,
+                'email' => $email,
+                'celular' => $celular,
+                'mensaje' => $mensaje,
+            ], function ($m) use ($from) {
+                $m->to($from, 'MOUNTAIN CUSCO TOURS')
+                    ->subject('MOUNTAIN - Formulario de Contacto')
+                    ->from('info@mountaincuscotours.com', 'MOUNTAIN CUSCO TOURS');
+            });
+
+            return Redirect::to(URL::previous() . "#contacto")->with('status', 'Mensaje enviado con éxito.');
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => 'Error al enviar el mensaje.']);
+        }
+    }
+    public function contact_form2(Request $request){
         $from = 'info@mountaincuscotours.com';
         $nombre = $request->tNombre;
         $email = $request->tEmail;

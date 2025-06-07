@@ -199,7 +199,7 @@
         <div class="flex justify-center items-center sm:justify-end lg:bg-left bg-right bg-green-500 relative">
             <img src="{{asset('images/mampi-2.jpg')}}" alt="" class="object-cover w-full" style="height: 500px">
             @if (session('status'))
-            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+            <div class="bg-green-100 border z-50 border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
                 <strong class="font-bold">Gracias por contactar con nosotros</strong><br>
                 <span class="block sm:inline">Su mensaje fue enviado satisfactoriamente.</span>
             </div>
