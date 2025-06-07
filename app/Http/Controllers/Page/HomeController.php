@@ -296,7 +296,7 @@ class HomeController extends Controller
             return redirect()->back()->withErrors(['error' => 'Ocurrió un error al enviar el mensaje.']);
         }
     }
-    
+
     public function contact_form_tour2(Request $request){
         $from = 'info@mountaincuscotours.com';
         $nombre = $request->tNombre;

@@ -227,25 +227,25 @@
             </div>
          </div>
       </div>
+      </div>
 @endsection
-          <script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
-@stack('scripts')
-          <script>
-              document.getElementById("demo-form").addEventListener("submit", function (event) {
-                  event.preventDefault(); // evita el envío directo
+@push('scripts')
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+    <script>
+        document.getElementById("demo-form").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-                  grecaptcha.ready(function () {
-                      grecaptcha.execute("{{ env('RECAPTCHA_SITE_KEY') }}", { action: "submit" }).then(function (token) {
-                          // crea input hidden con el token
-                          var input = document.createElement("input");
-                          input.type = "hidden";
-                          input.name = "g-recaptcha-response";
-                          input.value = token;
-                          document.getElementById("demo-form").appendChild(input);
+            grecaptcha.ready(function () {
+                grecaptcha.execute("{{ config('services.recaptcha.site_key') }}", { action: "submit" }).then(function (token) {
+                    var input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "g-recaptcha-response";
+                    input.value = token;
+                    document.getElementById("demo-form").appendChild(input);
+                    document.getElementById("demo-form").submit();
+                });
+            });
+        });
+    </script>
+@endpush
 
-                          // ahora sí envía el formulario
-                          document.getElementById("demo-form").submit();
-                      });
-                  });
-              });
-          </script>
