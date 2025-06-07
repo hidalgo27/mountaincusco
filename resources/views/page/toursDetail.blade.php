@@ -178,13 +178,13 @@
                   <div class="p-5"><span class=" text-2xl font-bold text-white">Contactar</span></div>
                </div>
                <div class="text-sm px-5 py-5 rounded-b">
-               <form method="POST" action="{{route('contact_form')}}" id="demo-form">
+               <form method="POST" action="{{route('contact_form_tour')}}" id="demo-form">
                      @csrf
                    <div style="display:none;">
                        <input type="text" name="website" tabindex="-1" autocomplete="off">
                    </div>
                   <div class="p-2">
-                     <input type="text" name="tNombre" placeholder="Nombres" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
+                     <input type="text" name="tNombre" placeholder="Nombre" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
                   </div>
                   <div class="p-2">
                      <input type="email"name="tEmail" placeholder="Correo electrónico" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
@@ -205,7 +205,7 @@
                           Enviar
                       </button>
                   </div>
-                </div>
+
             </form>
             </div>
             <div class="my-12">

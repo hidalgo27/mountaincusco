@@ -221,7 +221,83 @@ class HomeController extends Controller
             return $e;
         }
     }
-    public function contact_form_tour(Request $request){
+
+    public function contact_form_tour(Request $request)
+    {
+        // 🐝 Honeypot (campo invisible)
+        if (!empty($request->input('website'))) {
+            return redirect()->back()->withErrors(['spam' => 'Intento de spam bloqueado.']);
+        }
+
+        // ✅ Validar campos
+        $request->validate([
+            'tNombre' => 'required|string|max:100',
+            'tEmail' => 'required|email|max:255',
+            'tCelular' => 'nullable|string|max:20',
+            'tMensaje' => 'required|string|max:1000',
+            'g-recaptcha-response' => 'required'
+        ]);
+
+        // ✅ Validar token de reCAPTCHA v3
+        $recaptchaResponse = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => config('services.recaptcha.secret_key'),
+            'response' => $request->input('g-recaptcha-response'),
+            'remoteip' => $request->ip(),
+        ]);
+
+        $body = $recaptchaResponse->json();
+
+        // 📄 Registrar token recibido
+        \Log::info('Token recibido TOUR:', [
+            'token' => $request->input('g-recaptcha-response'),
+            'score' => $body['score'] ?? 'no-score',
+        ]);
+
+        // ❌ Bloquear si score bajo o token inválido
+        if (!$body['success'] || ($body['score'] ?? 0) < 0.5) {
+            \Log::warning('Formulario TOUR bloqueado por reCAPTCHA', [
+                'ip' => $request->ip(),
+                'score' => $body['score'] ?? 'no-score',
+                'data' => $request->except(['_token', 'g-recaptcha-response']),
+            ]);
+
+            return redirect()->back()->withErrors(['captcha' => 'Verificación fallida. Intente nuevamente.']);
+        }
+
+        // ✅ Todo OK → Enviar correos
+        try {
+            $from = 'info@mountaincuscotours.com';
+            $nombre = $request->tNombre;
+            $email = $request->tEmail;
+            $celular = $request->tCelular;
+            $mensaje = $request->tMensaje;
+
+            Mail::send(['html' => 'email.emailClient'], ['nombre' => $nombre],
+                function ($messaje) use ($email, $nombre) {
+                    $messaje->to($email, $nombre)
+                        ->subject('MOUNTAIN CUSCO TOURS')
+                        ->from('info@mountaincuscotours.com', 'MOUNTAIN CUSCO TOURS');
+                });
+
+            Mail::send(['html' => 'email.emailContacto'], [
+                'nombre' => $nombre,
+                'email' => $email,
+                'celular' => $celular,
+                'mensaje' => $mensaje,
+            ], function ($messaje) use ($from) {
+                $messaje->to($from, 'MOUNTAIN CUSCO TOURS')
+                    ->subject('MOUNTAIN CUSCO TOURS - Formulario de Contacto TOUR')
+                    ->from('info@mountaincuscotours.com', 'MOUNTAIN CUSCO TOURS');
+            });
+
+            return Redirect::to(URL::previous() . "#contacto_tour")->with('status2', 'Registro satisfactorio.');
+        } catch (\Exception $e) {
+            \Log::error('Error al enviar correo en contact_form_tour', ['error' => $e->getMessage()]);
+            return redirect()->back()->withErrors(['error' => 'Ocurrió un error al enviar el mensaje.']);
+        }
+    }
+    
+    public function contact_form_tour2(Request $request){
         $from = 'info@mountaincuscotours.com';
         $nombre = $request->tNombre;
         $email = $request->tEmail;
