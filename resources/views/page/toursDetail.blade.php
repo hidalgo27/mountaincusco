@@ -178,10 +178,13 @@
                   <div class="p-5"><span class=" text-2xl font-bold text-white">Contactar</span></div>
                </div>
                <div class="text-sm px-5 py-5 rounded-b">
-               <form method="POST" action="{{route('contact_form_tour')}}">
+               <form method="POST" action="{{route('contact_form')}}" id="demo-form">
                      @csrf
+                   <div style="display:none;">
+                       <input type="text" name="website" tabindex="-1" autocomplete="off">
+                   </div>
                   <div class="p-2">
-                     <input type="text" name="tNombre" placeholder="Nombre" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
+                     <input type="text" name="tNombre" placeholder="Nombres" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
                   </div>
                   <div class="p-2">
                      <input type="email"name="tEmail" placeholder="Correo electrónico" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow">
@@ -193,11 +196,16 @@
                      <textarea type="text" name="tMensaje" placeholder="Mensaje" required class="w-full p-2 focus:outline-none border border-gray-400 rounded hover:shadow"></textarea>
                   </div>
                   <div class="p-2">
-                     <button id="button" type="submit" class="focus:outline-none focus:shadow-outline w-full py-2 text-lg text-white transition-all duration-150 ease-linear bg-secondary tracking-wider hover:bg-secondary hover:bg-opacity-80 transition duration-500 rounded-full">
-                        Enviar
-                     </button>
+                      <button
+                          class="bg-secondary g-recaptcha hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                          type="submit"
+                          data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"
+                          data-callback='onSubmit'
+                          data-action='submit'>
+                          Enviar
+                      </button>
                   </div>
-               </div>
+                </div>
             </form>
             </div>
             <div class="my-12">
@@ -220,3 +228,24 @@
          </div>
       </div>
 @endsection
+          <script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+@stack('scripts')
+          <script>
+              document.getElementById("demo-form").addEventListener("submit", function (event) {
+                  event.preventDefault(); // evita el envío directo
+
+                  grecaptcha.ready(function () {
+                      grecaptcha.execute("{{ env('RECAPTCHA_SITE_KEY') }}", { action: "submit" }).then(function (token) {
+                          // crea input hidden con el token
+                          var input = document.createElement("input");
+                          input.type = "hidden";
+                          input.name = "g-recaptcha-response";
+                          input.value = token;
+                          document.getElementById("demo-form").appendChild(input);
+
+                          // ahora sí envía el formulario
+                          document.getElementById("demo-form").submit();
+                      });
+                  });
+              });
+          </script>
