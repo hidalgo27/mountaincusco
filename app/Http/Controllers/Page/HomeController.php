@@ -10,6 +10,7 @@ use App\Models\THotel;
 use App\Models\TpaqueteItinerario;
 use App\Models\TItinerario;
 use App\Models\TDestino;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
