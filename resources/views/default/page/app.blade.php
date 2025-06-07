@@ -150,7 +150,7 @@
 {{--            </a>--}}
         </div>
         <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-couple-walking-in-the-forest-43148-large.mp4" type="video/mp4" />Your browser does not support the video tag.
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />Your browser does not support the video tag.
 {{--            <source src="{{asset('media/intro.mp4')}}" type="video/mp4" />Your browser does not support the video tag.--}}
         </video>
         {{--        <div class="vimeo-wrapper absolute z-10 w-auto min-w-full min-h-full max-w-none">--}}
