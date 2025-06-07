@@ -178,7 +178,7 @@
                   <div class="p-5"><span class=" text-2xl font-bold text-white">Contactar</span></div>
                </div>
                <div class="text-sm px-5 py-5 rounded-b">
-               <form method="POST" action="{{route('contact_form_tour')}}" id="demo-form">
+               <form method="POST" action="{{route('contact_form_tour')}}" id="demo-form-tour">
                      @csrf
                    <div style="display:none;">
                        <input type="text" name="website" tabindex="-1" autocomplete="off">
@@ -232,7 +232,7 @@
 @push('scripts')
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
     <script>
-        document.getElementById("demo-form").addEventListener("submit", function (event) {
+        document.getElementById("demo-form-tour").addEventListener("submit", function (event) {
             event.preventDefault();
 
             grecaptcha.ready(function () {
@@ -241,8 +241,8 @@
                     input.type = "hidden";
                     input.name = "g-recaptcha-response";
                     input.value = token;
-                    document.getElementById("demo-form").appendChild(input);
-                    document.getElementById("demo-form").submit();
+                    document.getElementById("demo-form-tour").appendChild(input);
+                    document.getElementById("demo-form-tour").submit();
                 });
             });
         });
