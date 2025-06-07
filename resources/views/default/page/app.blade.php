@@ -51,7 +51,7 @@
 {{--        </button>--}}
 {{--    </div>--}}
 
-    <div class="fixed bottom-0 right-0 z-50 p-2">
+    <div class="fixed bottom-0 right-0 z-50 p-2 hidden">
         <a href="https://api.whatsapp.com/send?phone=51987361601" target="_blank">
             <img src="{{asset('images/whatsapp-i.png')}}" alt="" class="w-20 animate-bounce">
         </a>
@@ -209,6 +209,9 @@
                     <h2 class="text-3xl mb-6 font-black text-primary">Formulario de Contacto</h2>
                     <form method="POST" action="{{route('contact_form')}}" id="demo-form">
                         @csrf
+                        <div style="display:none;">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        </div>
                         <div class="mb-4">
                             <input class="shadow appearance-none border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tNombre" type="text" placeholder="Nombre" required>
                         </div>
@@ -222,13 +225,23 @@
                             <textarea class="shadow form-textarea mt-1 block w-full border rounded w-full py-2 px-3 placeholder-primary placeholder-opacity-70 leading-tight focus:outline-none focus:shadow-outline" name="tMensaje" placeholder="Mensaje" required></textarea>
                         </div>
                         <div class="flex items-center justify-center">
-                            <button class="bg-secondary g-recaptcha hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"
-                                    data-sitekey="6LeTKLAnAAAAACyYwuvEibGgQiph78CJAzlw5Wry"
-                                    data-callback='onSubmit'
-                                    data-action='submit'>
+                            <button
+                                class="bg-secondary g-recaptcha hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="submit"
+                                data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"
+                                data-callback='onSubmit'
+                                data-action='submit'>
                                 Enviar
                             </button>
                         </div>
+{{--                        <div class="flex items-center justify-center">--}}
+{{--                            <button class="bg-secondary g-recaptcha hover:bg-opacity-70 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"--}}
+{{--                                    data-sitekey="6LeTKLAnAAAAACyYwuvEibGgQiph78CJAzlw5Wry"--}}
+{{--                                    data-callback='onSubmit'--}}
+{{--                                    data-action='submit'>--}}
+{{--                                Enviar--}}
+{{--                            </button>--}}
+{{--                        </div>--}}
                     </form>
                 </div>
             </div>
@@ -327,11 +340,14 @@
         </div>
     </footer>
 </div>
-<script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+{{--<script src="https://www.google.com/recaptcha/api.js"></script>--}}
 <script src="{{asset('js/app.js')}}"></script>
 @stack('scripts')
 <script src="{{asset('js/plugins.js')}}"></script>
 <script>
+
+
     (() => {
         'use strict';
 
@@ -391,6 +407,25 @@
     function onSubmit(token) {
         document.getElementById("demo-form").submit();
     }
+
+
+    document.getElementById("demo-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // evita el envío directo
+
+        grecaptcha.ready(function () {
+            grecaptcha.execute("{{ env('RECAPTCHA_SITE_KEY') }}", { action: "submit" }).then(function (token) {
+                // crea input hidden con el token
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = "g-recaptcha-response";
+                input.value = token;
+                document.getElementById("demo-form").appendChild(input);
+
+                // ahora sí envía el formulario
+                document.getElementById("demo-form").submit();
+            });
+        });
+    });
 
 </script>
 </body>
