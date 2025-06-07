@@ -51,7 +51,7 @@
 {{--        </button>--}}
 {{--    </div>--}}
 
-    <div class="fixed bottom-0 right-0 z-50 p-2 hidden">
+    <div class="fixed bottom-0 right-0 z-50 p-2">
         <a href="https://api.whatsapp.com/send?phone=51987361601" target="_blank">
             <img src="{{asset('images/whatsapp-i.png')}}" alt="" class="w-20 animate-bounce">
         </a>
